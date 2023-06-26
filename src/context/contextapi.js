@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect } from "react";
-
 import { fetchDataFromApi } from "../utils/api";
 export const Context = createContext();
+
 
 export const AppContext = (props) => {
     const [loading, setLoading] = useState(false);
@@ -12,6 +12,7 @@ export const AppContext = (props) => {
     useEffect(() => {
         fetchSelectedCategoryData(selectedCategory);
     }, [selectedCategory]);
+
 
    // here we area getting the data from the api by destructing the contents
     const fetchSelectedCategoryData = (query) => {
